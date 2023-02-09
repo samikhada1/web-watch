@@ -5,6 +5,12 @@ function displayTime() {
     var sec = dateTime.getSeconds();
     var session = document.getElementById('session')
 
+    if(hrs > 12) {
+        session.innerHTML = 'PM';
+    }else {
+        session.innerHTML = 'AM';
+    }
+
     document.getElementById('hourse').innerHTML = hrs;
     document.getElementById('minutes').innerHTML = min;
     document.getElementById('seconds').innerHTML = sec;
